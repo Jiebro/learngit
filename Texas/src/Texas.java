@@ -17,9 +17,12 @@ public class Texas {
 
 
     static String rule(String poke1,String poke2){
+        //战斗力:CE(Combat Effectiveness)
         int ce1=0;
         int ce2=0;
         search search =new search();
+        //通过利用数值大小进行比较来确定输赢
+        //ce1，ce2代表两位游戏玩家
         if(search.haveSameSuit(poke1))
             ce1=5;
         else if(search.haveThree(poke1))
@@ -108,6 +111,9 @@ haveSameSuit用于检测手牌当中是否有相同的花色
         return false;
     }
 
+    /*
+    haveSameNum2用于检测是否是双对
+     */
     public boolean haveSameNum2(String s) {
         final String[] pokenum = {"2", "3", "4", "5", "6", "7", "8", "9", "T", "J", "Q","k","A"};
         int flag = 0;
@@ -130,6 +136,9 @@ haveSameSuit用于检测手牌当中是否有相同的花色
             return false;
     }
 
+    /*
+    findTheBiggestnum适用于当两个玩家手牌的类型相同时找出其中最大的数字
+     */
     public int findTheBiggestnum(String s){
         final String[] pokenum = {"2", "3", "4", "5", "6", "7", "8", "9", "T", "J", "Q","k", "A"};
         int[] num =new int[6];
@@ -146,6 +155,9 @@ haveSameSuit用于检测手牌当中是否有相同的花色
         return num[0];
     }
 
+    /*
+    haveThere用于检测三条
+     */
     public boolean haveThree(String s) {
         final String[] pokenum = {"2", "3", "4", "5", "6", "7", "8", "9", "T", "J", "Q","k","A"};
         int flag = 0;
@@ -164,6 +176,9 @@ haveSameSuit用于检测手牌当中是否有相同的花色
         return false;
     }
 
+    /*
+    haveStraight适用于是同花的情况下判断是否是同花顺
+     */
     public boolean haveStraight(String s) {
         final String[] pokenum = {"2", "3", "4", "5", "6", "7", "8", "9", "T", "J", "Q","k","A"};
         int[] num = new int[4];
