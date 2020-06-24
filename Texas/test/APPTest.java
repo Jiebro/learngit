@@ -4,6 +4,9 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class APPTest {
+    /*
+    测试用例1
+     */
     @Test
      public void shouldreturn_Whitewins_when_give_sample1(){
         Texas poke= new Texas();
@@ -11,6 +14,9 @@ public class APPTest {
         AssertionsKt.assertEquals("White wins",expectedResult,"jiebro");
     }
 
+    /*
+    测试用例2
+  */
     @Test
     public void shouldreturn_Whitewins_when_give_sample2(){
         Texas poke= new Texas();
@@ -18,6 +24,9 @@ public class APPTest {
         AssertionsKt.assertEquals("Black wins",expectedResult,"jiebro");
     }
 
+    /*
+    测试用例3
+  */
     @Test
     public void shouldreturn_Blackwins_when_give_sample3(){
         Texas poke= new Texas();
@@ -25,6 +34,10 @@ public class APPTest {
         AssertionsKt.assertEquals("Black wins",expectedResult,"jiebro");
     }
 
+
+    /*
+    测试用例4
+  */
     @Test
     public void shouldreturn_Tie_when_give_sample4(){
         Texas poke= new Texas();

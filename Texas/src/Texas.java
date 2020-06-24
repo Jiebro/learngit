@@ -115,6 +115,7 @@ haveSameSuit用于检测手牌当中是否有相同的花色
     haveSameNum2用于检测是否是双对
      */
     public boolean haveSameNum2(String s) {
+        //通过对于可能出现的情况进行遍历来找出我们需要的内容，之后的算法也同理
         final String[] pokenum = {"2", "3", "4", "5", "6", "7", "8", "9", "T", "J", "Q","k","A"};
         int flag = 0;
         int times=0;
